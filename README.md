@@ -9,15 +9,15 @@
 
   - post방식으로 받기 때문에 한글을 처리 할 수 있도록 코드를 추가 해준다. 
   <code>
-    request.setCharacterEncoding("utf-8");
+    request.setCharacterEncoding("utf-8");<br>
   </code>
   - form으로 넘어온 데이터를 모두 request객체의 getParameter() 메서드를 통해 받아준다. 
   <code>
-    String id = request.getParameter("id");
-		String password = request.getParameter("password");
-		String gender = request.getParameter("gender");
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
+    String id = request.getParameter("id"); <br>
+		String password = request.getParameter("password");<br>
+		String gender = request.getParameter("gender");<br>
+		String name = request.getParameter("name");<br>
+		String email = request.getParameter("email");<br>
     </code>
 #### 4) CustomerService에서 회원가입관련 메서드를 구현한다.  - 회원등록 로직 
  
