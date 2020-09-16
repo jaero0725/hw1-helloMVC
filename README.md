@@ -10,7 +10,7 @@
 
 #### 4) CustomerService에서 회원가입관련 메서드를 구현한다.  - 회원등록 로직 
 
-#### 5) CustomerService 객체에서 register 메서드를 통해 Customer 객체를 받아 오면 조건문으로 검사를 해서 registerSuccess.jsp로 보낼지, error.jsp 페이지로 보낼지 판단을 한다. 
+#### 5) CustomerService 객체에서 register 메서드를 통해 Customer 객체를 받아 오면 조건문으로 검사를 하여 어느 페이지로 보낼지 판단.
 
 #### 6) 계정등록이 성공하여 view 부분에서 setAttribute()메서드를 통해 받은 customer객체를 통해 등록된 회원의 정보를 보여준다. 
            
