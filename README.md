@@ -1,5 +1,6 @@
 
 # < MVC 패턴을 이용하여 회원 등록 기능 구현 >  - Choi Jae Ho
+---
 ### 회원등록 기능 구현 방법
 #### 1) view 부분에서 registerFrom.jsp 에서 회원등록 폼에서 form을 post방식으로 submit 한다.
 
@@ -8,23 +9,23 @@
 #### 3) controller 부분인 doRegister에서 폼의 데이터를 post형식으로 받게 된다. 
 
   - post방식으로 받기 때문에 한글을 처리 할 수 있도록 코드를 추가 해준다. 
-  <code>
-    request.setCharacterEncoding("utf-8");<br>
-  </code>
+
+    `request.setCharacterEncoding("utf-8");<br>
+
   - form으로 넘어온 데이터를 모두 request객체의 getParameter() 메서드를 통해 받아준다. 
-  <code>
-    String id = request.getParameter("id"); <br>
+
+    `String id = request.getParameter("id"); <br>
 		String password = request.getParameter("password");<br>
 		String gender = request.getParameter("gender");<br>
 		String name = request.getParameter("name");<br>
 		String email = request.getParameter("email");<br>
-    </code>
+
 #### 4) CustomerService에서 회원가입관련 메서드를 구현한다.  - 회원등록 로직 
  
   - CustomerService 객체를 singleton pattern으로 받아온다. 
   
   - CustomerService 객체에서 회원등록을 할 수 있는 Register 메서드를 구현한다. 
-      
+      `
       //addCustomer 메서드
       //customers map 자료구조에 id를 key를 가지는 customer 객체를 삽입해준다. 
       public void addCustomer(Customer customer) {
@@ -38,7 +39,6 @@
         addCustomer(customer);
         return customer;
       }
-      </code>
       
  #### 5) CustomerService 객체에서 register 메서드를 통해 Customer 객체를 받아 오면 조건문으로 검사를 해서 registerSuccess.jsp로 보낼지, error.jsp 페이지로 보낼지 판단을 한다. 
 
