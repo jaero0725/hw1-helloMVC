@@ -1,6 +1,5 @@
 # hw1-helloMVC - 1514043_최재호
-
-< MVC 패턴을 이용하여 회원 등록 기능 구현 >
+# < MVC 패턴을 이용하여 회원 등록 기능 구현 >
 * 회원등록 기능 구현 방법
 
 1) view 부분에서 registerFrom.jsp 에서 회원등록 폼에서 form을 post방식으로 submit 한다.
@@ -56,10 +55,12 @@
         page ="/view/registerSuccess.jsp";
         request.setAttribute("customer", customer);
       }
+     
+  - 계정등록이 성공하면 request.setAttribute("customer", customer); 를 통해 customer 객체를 페이지에 보내준다. 
       
-      - 계정등록이 성공하면 request.setAttribute("customer", customer); 를 통해 customer 객체를 페이지에 보내준다. 
+  6) 계정등록이 성공하여 view 부분에서 setAttribute()메서드를 통해 받은 customer객체를 통해 등록된 회원의 정보를 보여준다. 
+           
       
-      
-    6) 계정등록이 성공하여 view 부분에서 setAttribute()메서드를 통해 받은 customer객체를 통해 등록된 회원의 정보를 보여준다. 
+
     
     
